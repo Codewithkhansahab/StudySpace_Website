@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudySpace - Personal Study Assistant</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+    <nav style="display: flex; align-items: center;" class="main-nav">
+        <div class="nav-logo">StudySpace</div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Dashboard</a></li>
+            <li><a href="courses.html">My Courses</a></li>
+            <li><a href="calendar.html">Calendar</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="flashcards.html">Flashcards</a></li>
+            <li><a href="goals.html">Goals</a></li>
+            <li><a href="statistics.html">Statistics</a></li>
+            <li><a href="community.html">Community</a></li>
+            <li><a href="settings.html">Settings</a></li>
+            <li><a href="profile.html">Profile</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <header>
+            <h1>StudySpace</h1>
+            <p class="subtitle">Your Personal Study Assistant</p>
+        </header>
+
+        <div class="dashboard">
+            <div class="widget tasks">
+                <h2>Tasks</h2>
+                <ul class="task-list">
+                    <li>Complete Math Assignment</li>
+                    <li>Read Chapter 5 - History</li>
+                    <li>Practice Programming</li>
+                    <li>Review Study Notes</li>
+                </ul>
+            </div>
+
+            <div class="widget timer">
+                <h2>Study Timer</h2>
+                <div class="timer-display">25:00</div>
+                <div class="timer-controls">
+                    <button class="start">Start</button>
+                    <button class="reset">Reset</button>
+                </div>
+            </div>
+
+            <div class="widget notes">
+                <h2>Quick Notes</h2>
+                <div class="note">
+                    <p>Remember to review key concepts before the exam</p>
+                </div>
+                <div class="note">
+                    <p>Group study session on Thursday</p>
+                </div>
+            </div>
+
+            <div class="widget progress">
+                <h2>Progress Tracking</h2>
+                <div class="progress-item">
+                    <span>Mathematics</span>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 75%"></div>
+                    </div>
+                </div>
+                <div class="progress-item">
+                    <span>History</span>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 60%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
