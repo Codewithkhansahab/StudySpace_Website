@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar - StudySpace</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/calendar.css">
+</head>
+<body>
+    <nav style="display: flex; align-items: center;" class="main-nav">
+        <div class="nav-logo">StudySpace</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Dashboard</a></li>
+            <li><a href="courses.html" class="active">My Courses</a></li>
+            <li><a href="calendar.html">Calendar</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="flashcards.html">Flashcards</a></li>
+            <li><a href="goals.html">Goals</a></li>
+            <li><a href="statistics.html">Statistics</a></li>
+            <li><a href="community.html">Community</a></li>
+            <li><a href="settings.html">Settings</a></li>
+            <li><a href="profile.html">Profile</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <header>
+            <h1>Study Calendar</h1>
+            <p class="subtitle">Plan Your Study Schedule</p>
+        </header>
+
+        <div class="calendar-container">
+            <div class="calendar-header">
+                <button class="month-nav">&lt;</button>
+                <h2>September 2023</h2>
+                <button class="month-nav">&gt;</button>
+            </div>
+
+            <div class="calendar-grid">
+                <div class="calendar-day header">Sun</div>
+                <div class="calendar-day header">Mon</div>
+                <div class="calendar-day header">Tue</div>
+                <div class="calendar-day header">Wed</div>
+                <div class="calendar-day header">Thu</div>
+                <div class="calendar-day header">Fri</div>
+                <div class="calendar-day header">Sat</div>
+
+                <!-- Calendar days -->
+                <div class="calendar-day inactive">27</div>
+                <div class="calendar-day inactive">28</div>
+                <div class="calendar-day inactive">29</div>
+                <div class="calendar-day inactive">30</div>
+                <div class="calendar-day">1</div>
+                <div class="calendar-day">2</div>
+                <div class="calendar-day">3</div>
+                <!-- More days... -->
+            </div>
+
+            <div class="events-list">
+                <h3>Today's Schedule</h3>
+                <div class="event">
+                    <span class="event-time">09:00 AM</span>
+                    <span class="event-title">Mathematics Study Session</span>
+                </div>
+                <div class="event">
+                    <span class="event-time">02:00 PM</span>
+                    <span class="event-title">Physics Group Discussion</span>
+                </div>
+                <button class="add-event-btn">+ Add Event</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

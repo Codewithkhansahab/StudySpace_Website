@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - StudySpace</title>
+    <link rel="stylesheet" href="css/common.css">
+    
+    <link rel="stylesheet" href="css/settings.css">
+</head>
+<body>
+    <nav style="display: flex; align-items: center;" class="main-nav">
+        <!-- Same navigation as other pages -->
+        <div class="nav-logo">StudySpace</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Dashboard</a></li>
+            <li><a href="courses.html" class="active">My Courses</a></li>
+            <li><a href="calendar.html">Calendar</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="flashcards.html">Flashcards</a></li>
+            <li><a href="goals.html">Goals</a></li>
+            <li><a href="statistics.html">Statistics</a></li>
+            <li><a href="community.html">Community</a></li>
+            <li><a href="settings.html">Settings</a></li>
+            <li><a href="profile.html">Profile</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <header>
+            <h1>Settings</h1>
+            <p class="subtitle">Customize Your Study Experience</p>
+        </header>
+
+        <div class="settings-container">
+            <div class="settings-sidebar">
+                <ul class="settings-nav">
+                    <li class="active">General</li>
+                    <li>Notifications</li>
+                    <li>Privacy</li>
+                    <li>Appearance</li>
+                    <li>Language</li>
+                </ul>
+            </div>
+
+            <div class="settings-content">
+                <section class="settings-section">
+                    <h2>General Settings</h2>
+                    
+                    <div class="setting-item">
+                        <div class="setting-info">
+                            <h3>Time Zone</h3>
+                            <p>Set your local time zone for accurate scheduling</p>
+                        </div>
+                        <select class="setting-control">
+                            <option>UTC (GMT+0)</option>
+                            <option>EST (GMT-5)</option>
+                            <option>PST (GMT-8)</option>
+                        </select>
+                    </div>
+
+                    <div class="setting-item">
+                        <div class="setting-info">
+                            <h3>Study Timer Duration</h3>
+                            <p>Default duration for study sessions</p>
+                        </div>
+                        <select class="setting-control">
+                            <option>25 minutes</option>
+                            <option>30 minutes</option>
+                            <option>45 minutes</option>
+                            <option>60 minutes</option>
+                        </select>
+                    </div>
+
+                    <div class="setting-item">
+                        <div class="setting-info">
+                            <h3>Email Notifications</h3>
+                            <p>Receive updates and reminders via email</p>
+                        </div>
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
