@@ -1,0 +1,153 @@
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    padding: 20px;
+    animation: fadeIn 0.8s ease;
+}
+
+.widget {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+}
+
+.widget:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.widget h2 {
+    color: var(--dark-color);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #f0f2f5;
+    position: relative;
+}
+
+.widget h2::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: var(--primary-color);
+}
+
+/* Tasks Widget */
+.task-list {
+    list-style: none;
+    padding: 0;
+}
+
+.task-list li {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.task-list li:last-child {
+    border-bottom: none;
+}
+
+.timer-display {
+    font-size: 3rem;
+    text-align: center;
+    margin: 1rem 0;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.timer-controls {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.timer-controls button {
+    padding: 10px 25px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    transition: var(--transition);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.start {
+    background: var(--secondary-color);
+    color: white;
+}
+
+.reset {
+    background: #e74c3c;
+    color: white;
+}
+
+.timer-controls button:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+/* Notes Widget */
+.note {
+    background: var(--background-light);
+    padding: 1rem;
+    border-radius: 5px;
+    margin-top: 1rem;
+}
+
+.note:hover {
+    transform: scale(1.02);
+}
+
+.note::before {
+    content: '📝';
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: white;
+    padding: 5px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Progress Widget */
+.progress-item {
+    margin-bottom: 1rem;
+}
+
+.progress-item span {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--dark-color);
+    font-weight: 500;
+}
+
+.progress-bar {
+    background: var(--background-light);
+    height: 10px;
+    border-radius: 5px;
+    margin-top: 0.5rem;
+}
+
+.progress-fill {
+    background: var(--primary-color);
+    height: 100%;
+    border-radius: 5px;
+    transition: width var(--transition-speed) ease;
+}
+
+@media (max-width: 768px) {
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+    
+    .widget {
+        margin-bottom: 20px;
+    }
+}

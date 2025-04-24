@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudySpace - Calendar</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/calendar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="nav-logo">StudySpace</div>
+        <ul class="nav-links">
+            <li><a href="index.html"><i class="fas fa-home"></i> Dashboard</a></li>
+            <li><a href="courses.html"><i class="fas fa-book"></i> My Courses</a></li>
+            <li><a href="calendar.html" class="active"><i class="fas fa-calendar"></i> Calendar</a></li>
+            <li><a href="resources.html"><i class="fas fa-folder"></i> Resources</a></li>
+            <li><a href="flashcards.html"><i class="fas fa-clone"></i> Flashcards</a></li>
+            <li><a href="goals.html"><i class="fas fa-bullseye"></i> Goals</a></li>
+            <li><a href="statistics.html"><i class="fas fa-chart-line"></i> Statistics</a></li>
+            <li><a href="community.html"><i class="fas fa-users"></i> Community</a></li>
+            <li><a href="settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+            <li><a href="profile.html"><i class="fas fa-user"></i> Profile</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <header class="page-header">
+            <h1>Calendar</h1>
+            <p class="subtitle">Manage your schedule and deadlines</p>
+        </header>
+
+        <div class="calendar-controls">
+            <div class="calendar-navigation">
+                <form action="/change-month" method="get" class="inline-form">
+                    <button type="submit" name="direction" value="prev" class="btn btn-icon">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <h2 class="current-month">March 2024</h2>
+                    <button type="submit" name="direction" value="next" class="btn btn-icon">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </form>
+            </div>
+            <div class="view-controls">
+                <form action="/change-view" method="get" class="inline-form">
+                    <button type="submit" name="view" value="month" class="btn active">Month</button>
+                    <button type="submit" name="view" value="week" class="btn">Week</button>
+                    <button type="submit" name="view" value="day" class="btn">Day</button>
+                </form>
+            </div>
+            <form action="/add-event" method="get">
+                <button type="submit" class="btn btn-primary">
+                    <i class="fas fa-plus"></i> Add Event
+                </button>
+            </form>
+        </div>
+
+        <div class="calendar-grid">
+            <div class="calendar-header">
+                <div class="calendar-cell">Sunday</div>
+                <div class="calendar-cell">Monday</div>
+                <div class="calendar-cell">Tuesday</div>
+                <div class="calendar-cell">Wednesday</div>
+                <div class="calendar-cell">Thursday</div>
+                <div class="calendar-cell">Friday</div>
+                <div class="calendar-cell">Saturday</div>
+            </div>
+            
+            <div class="calendar-body">
+                <!-- Previous Month -->
+                <div class="calendar-cell other-month">25</div>
+                <div class="calendar-cell other-month">26</div>
+                <div class="calendar-cell other-month">27</div>
+                <div class="calendar-cell other-month">28</div>
+                <div class="calendar-cell other-month">29</div>
+                
+                <!-- Current Month -->
+                <div class="calendar-cell">1</div>
+                <div class="calendar-cell">2</div>
+                <div class="calendar-cell">3</div>
+                <div class="calendar-cell">4
+                    <div class="event assignment">
+                        <i class="fas fa-book"></i> Math Assignment
+                    </div>
+                </div>
+                <div class="calendar-cell">5</div>
+                <div class="calendar-cell">6</div>
+                <div class="calendar-cell">7</div>
+                <div class="calendar-cell">8</div>
+                <div class="calendar-cell current-day">9
+                    <div class="event exam">
+                        <i class="fas fa-file-alt"></i> Physics Exam
+                    </div>
+                </div>
+                <div class="calendar-cell">10</div>
+                <!-- Add more days as needed -->
+            </div>
+        </div>
+
+        <div class="upcoming-events">
+            <h3>Upcoming Events</h3>
+            <div class="event-list">
+                <div class="card event-card">
+                    <div class="event-time">
+                        <i class="fas fa-clock"></i> 10:00 AM
+                    </div>
+                    <div class="event-info">
+                        <h4>Physics Exam</h4>
+                        <p>Chapter 5 & 6 - Mechanics</p>
+                    </div>
+                    <div class="event-actions">
+                        <form action="/edit-event" method="get" class="inline-form">
+                            <button type="submit" class="btn btn-icon" title="Edit">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                        </form>
+                        <form action="/delete-event" method="post" class="inline-form">
+                            <button type="submit" class="btn btn-icon" title="Delete">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="card event-card">
+                    <div class="event-time">
+                        <i class="fas fa-clock"></i> 2:30 PM
+                    </div>
+                    <div class="event-info">
+                        <h4>Study Group Meeting</h4>
+                        <p>Web Development Project</p>
+                    </div>
+                    <div class="event-actions">
+                        <form action="/edit-event" method="get" class="inline-form">
+                            <button type="submit" class="btn btn-icon" title="Edit">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                        </form>
+                        <form action="/delete-event" method="post" class="inline-form">
+                            <button type="submit" class="btn btn-icon" title="Delete">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

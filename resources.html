@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudySpace - Resources</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/resources.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="nav-logo">StudySpace</div>
+        <ul class="nav-links">
+            <li><a href="index.html"><i class="fas fa-home"></i> Dashboard</a></li>
+            <li><a href="courses.html"><i class="fas fa-book"></i> My Courses</a></li>
+            <li><a href="calendar.html"><i class="fas fa-calendar"></i> Calendar</a></li>
+            <li><a href="resources.html" class="active"><i class="fas fa-folder"></i> Resources</a></li>
+            <li><a href="flashcards.html"><i class="fas fa-clone"></i> Flashcards</a></li>
+            <li><a href="goals.html"><i class="fas fa-bullseye"></i> Goals</a></li>
+            <li><a href="statistics.html"><i class="fas fa-chart-line"></i> Statistics</a></li>
+            <li><a href="community.html"><i class="fas fa-users"></i> Community</a></li>
+            <li><a href="settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+            <li><a href="profile.html"><i class="fas fa-user"></i> Profile</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <header class="page-header">
+            <h1>Resources</h1>
+            <p class="subtitle">Organize your study materials</p>
+        </header>
+
+        <div class="resources-layout">
+            <!-- Sidebar with folders -->
+            <aside class="resources-sidebar">
+                <div class="sidebar-header">
+                    <h2>Folders</h2>
+                    <form action="/create-folder" method="post" class="inline-form">
+                        <button type="submit" class="btn btn-icon" title="New Folder">
+                            <i class="fas fa-folder-plus"></i>
+                        </button>
+                    </form>
+                </div>
+                
+                <nav class="folder-nav">
+                    <a href="?folder=all" class="folder-item active">
+                        <i class="fas fa-folder"></i> All Files
+                        <span class="folder-count">24</span>
+                    </a>
+                    <a href="?folder=recent" class="folder-item">
+                        <i class="fas fa-clock"></i> Recent
+                        <span class="folder-count">8</span>
+                    </a>
+                    <a href="?folder=favorites" class="folder-item">
+                        <i class="fas fa-star"></i> Favorites
+                        <span class="folder-count">5</span>
+                    </a>
+                    
+                    <div class="folder-divider">Course Folders</div>
+                    
+                    <a href="?folder=math" class="folder-item">
+                        <i class="fas fa-folder"></i> Mathematics
+                        <span class="folder-count">6</span>
+                    </a>
+                    <a href="?folder=physics" class="folder-item">
+                        <i class="fas fa-folder"></i> Physics
+                        <span class="folder-count">4</span>
+                    </a>
+                    <a href="?folder=programming" class="folder-item">
+                        <i class="fas fa-folder"></i> Programming
+                        <span class="folder-count">8</span>
+                    </a>
+                </nav>
+
+                <div class="storage-info">
+                    <div class="storage-text">
+                        <span>Storage Used</span>
+                        <span>1.2 GB / 5 GB</span>
+                    </div>
+                    <div class="storage-bar">
+                        <div class="storage-fill" style="width: 24%"></div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Main content area -->
+            <main class="resources-main">
+                <div class="resources-header">
+                    <div class="search-bar">
+                        <form action="/search-resources" method="get" class="search-form">
+                            <input type="text" name="query" placeholder="Search resources..." class="form-control">
+                            <button type="submit" class="btn btn-icon">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </form>
+                    </div>
+                    
+                    <div class="resource-actions">
+                        <form action="/upload-resource" method="post" class="inline-form">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-upload"></i> Upload
+                            </button>
+                        </form>
+                        <form action="/create-link" method="post" class="inline-form">
+                            <button type="submit" class="btn">
+                                <i class="fas fa-link"></i> Add Link
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="view-controls">
+                    <form action="/change-view" method="get" class="inline-form">
+                        <button type="submit" name="view" value="grid" class="btn btn-icon active" title="Grid View">
+                            <i class="fas fa-th"></i>
+                        </button>
+                        <button type="submit" name="view" value="list" class="btn btn-icon" title="List View">
+                            <i class="fas fa-list"></i>
+                        </button>
+                    </form>
+                </div>
+
+                <div class="resources-grid">
+                    <!-- PDF File -->
+                    <div class="resource-card">
+                        <div class="resource-icon pdf">
+                            <i class="fas fa-file-pdf"></i>
+                        </div>
+                        <div class="resource-info">
+                            <h3>Calculus Notes Chapter 5</h3>
+                            <p>PDF • 2.5 MB</p>
+                        </div>
+                        <div class="resource-actions">
+                            <form action="/download" method="get" class="inline-form">
+                                <button type="submit" class="btn btn-icon" title="Download">
+                                    <i class="fas fa-download"></i>
+                                </button>
+                            </form>
+                            <form action="/favorite" method="post" class="inline-form">
+                                <button type="submit" class="btn btn-icon" title="Add to Favorites">
+                                    <i class="far fa-star"></i>
+                                </button>
+                            </form>
+                            <div class="dropdown">
+                                <button class="btn btn-icon">
+                                    <i class="fas fa-ellipsis-v"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Image File -->
+                    <div class="resource-card">
+                        <div class="resource-icon image">
+                            <i class="fas fa-file-image"></i>
+                        </div>
+                        <div class="resource-info">
+                            <h3>Physics Diagram</h3>
+                            <p>PNG • 1.1 MB</p>
+                        </div>
+                        <div class="resource-actions">
+                            <form action="/download" method="get" class="inline-form">
+                                <button type="submit" class="btn btn-icon" title="Download">
+                                    <i class="fas fa-download"></i>
+                                </button>
+                            </form>
+                            <form action="/favorite" method="post" class="inline-form">
+                                <button type="submit" class="btn btn-icon" title="Add to Favorites">
+                                    <i class="far fa-star"></i>
+                                </button>
+                            </form>
+                            <div class="dropdown">
+                                <button class="btn btn-icon">
+                                    <i class="fas fa-ellipsis-v"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Link -->
+                    <div class="resource-card">
+                        <div class="resource-icon link">
+                            <i class="fas fa-link"></i>
+                        </div>
+                        <div class="resource-info">
+                            <h3>Programming Tutorial</h3>
+                            <p>External Link</p>
+                        </div>
+                        <div class="resource-actions">
+                            <form action="/open-link" method="get" class="inline-form">
+                                <button type="submit" class="btn btn-icon" title="Open Link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </button>
+                            </form>
+                            <form action="/favorite" method="post" class="inline-form">
+                                <button type="submit" class="btn btn-icon" title="Add to Favorites">
+                                    <i class="far fa-star"></i>
+                                </button>
+                            </form>
+                            <div class="dropdown">
+                                <button class="btn btn-icon">
+                                    <i class="fas fa-ellipsis-v"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+</html>

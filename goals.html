@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudySpace - Goals</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/goals.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+<nav class="main-nav">
+    <div class="nav-logo">StudySpace</div>
+    <ul class="nav-links">
+        <li><a href="index.html"><i class="fas fa-home"></i> Dashboard</a></li>
+        <li><a href="courses.html"><i class="fas fa-book"></i> My Courses</a></li>
+        <li><a href="calendar.html"><i class="fas fa-calendar"></i> Calendar</a></li>
+        <li><a href="resources.html" class="active"><i class="fas fa-folder"></i> Resources</a></li>
+        <li><a href="flashcards.html"><i class="fas fa-clone"></i> Flashcards</a></li>
+        <li><a href="goals.html"><i class="fas fa-bullseye"></i> Goals</a></li>
+        <li><a href="statistics.html"><i class="fas fa-chart-line"></i> Statistics</a></li>
+        <li><a href="community.html"><i class="fas fa-users"></i> Community</a></li>
+        <li><a href="settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+        <li><a href="profile.html"><i class="fas fa-user"></i> Profile</a></li>
+    </ul>
+</nav>
+
+    <div class="container">
+        <header class="page-header">
+            <h1>Goals</h1>
+            <p class="subtitle">Set and track your study goals</p>
+        </header>
+
+        <div class="goals-layout">
+            <!-- Goals Overview -->
+            <section class="goals-overview">
+                <div class="overview-header">
+                    <h2>Progress Overview</h2>
+                    <div class="time-filter">
+                        <button class="btn active">Week</button>
+                        <button class="btn">Month</button>
+                        <button class="btn">Semester</button>
+                    </div>
+                </div>
+
+                <div class="overview-stats">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-tasks"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Active Goals</h3>
+                            <p class="stat-value">8</p>
+                            <span class="stat-change positive">
+                                <i class="fas fa-arrow-up"></i> 2 from last week
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Completed</h3>
+                            <p class="stat-value">12</p>
+                            <span class="stat-change positive">
+                                <i class="fas fa-arrow-up"></i> 3 this week
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Study Hours</h3>
+                            <p class="stat-value">24h</p>
+                            <span class="stat-change negative">
+                                <i class="fas fa-arrow-down"></i> 2h from target
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Active Goals -->
+            <section class="goals-section">
+                <div class="section-header">
+                    <h2>Active Goals</h2>
+                    <button class="btn btn-primary" id="addGoalBtn">
+                        <i class="fas fa-plus"></i> New Goal
+                    </button>
+                </div>
+
+                <div class="goals-grid">
+                    <!-- Study Time Goal -->
+                    <div class="goal-card">
+                        <div class="goal-header">
+                            <div class="goal-type study-time">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="goal-actions">
+                                <button class="btn btn-icon" title="Edit">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                                <button class="btn btn-icon" title="Delete">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <h3>Study Time</h3>
+                        <p class="goal-description">Study 30 hours this week</p>
+                        <div class="goal-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 80%"></div>
+                            </div>
+                            <span class="progress-text">24/30 hours</span>
+                        </div>
+                        <div class="goal-meta">
+                            <span class="deadline">
+                                <i class="fas fa-calendar"></i> Due in 3 days
+                            </span>
+                            <span class="streak">
+                                <i class="fas fa-fire"></i> 5 day streak
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Course Grade Goal -->
+                    <div class="goal-card">
+                        <div class="goal-header">
+                            <div class="goal-type grade">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div class="goal-actions">
+                                <button class="btn btn-icon" title="Edit">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                                <button class="btn btn-icon" title="Delete">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <h3>Physics Grade</h3>
+                        <p class="goal-description">Achieve A grade in Physics</p>
+                        <div class="goal-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 85%"></div>
+                            </div>
+                            <span class="progress-text">Current: A-</span>
+                        </div>
+                        <div class="goal-meta">
+                            <span class="deadline">
+                                <i class="fas fa-calendar"></i> End of semester
+                            </span>
+                            <span class="priority high">
+                                High Priority
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Flashcard Goal -->
+                    <div class="goal-card">
+                        <div class="goal-header">
+                            <div class="goal-type flashcards">
+                                <i class="fas fa-clone"></i>
+                            </div>
+                            <div class="goal-actions">
+                                <button class="btn btn-icon" title="Edit">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                                <button class="btn btn-icon" title="Delete">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <h3>Math Flashcards</h3>
+                        <p class="goal-description">Review 50 flashcards daily</p>
+                        <div class="goal-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 60%"></div>
+                            </div>
+                            <span class="progress-text">30/50 today</span>
+                        </div>
+                        <div class="goal-meta">
+                            <span class="deadline">
+                                <i class="fas fa-clock"></i> Today
+                            </span>
+                            <span class="streak">
+                                <i class="fas fa-fire"></i> 3 day streak
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Completed Goals -->
+            <section class="goals-section">
+                <div class="section-header">
+                    <h2>Completed Goals</h2>
+                    <button class="btn btn-secondary">
+                        <i class="fas fa-filter"></i> Filter
+                    </button>
+                </div>
+
+                <div class="completed-goals">
+                    <div class="goal-card completed">
+                        <div class="goal-header">
+                            <div class="goal-type reading">
+                                <i class="fas fa-book"></i>
+                            </div>
+                            <div class="completion-date">
+                                Completed: Mar 15, 2024
+                            </div>
+                        </div>
+                        <h3>Literature Reading</h3>
+                        <p class="goal-description">Read 3 chapters of Shakespeare</p>
+                        <div class="goal-achievement">
+                            <i class="fas fa-trophy"></i>
+                            <span>Completed ahead of schedule</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Add Goal Modal -->
+    <div class="modal" id="addGoalModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Create New Goal</h2>
+                <button class="btn btn-icon close-modal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <form class="goal-form">
+                <div class="form-group">
+                    <label for="goalType">Goal Type</label>
+                    <select id="goalType" class="form-control" required>
+                        <option value="study-time">Study Time</option>
+                        <option value="grade">Course Grade</option>
+                        <option value="flashcards">Flashcards</option>
+                        <option value="reading">Reading</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="goalTitle">Goal Title</label>
+                    <input type="text" id="goalTitle" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="goalDescription">Description</label>
+                    <textarea id="goalDescription" class="form-control" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="goalDeadline">Deadline</label>
+                    <input type="date" id="goalDeadline" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="goalPriority">Priority</label>
+                    <select id="goalPriority" class="form-control">
+                        <option value="low">Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="high">High</option>
+                    </select>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn btn-secondary close-modal">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Create Goal</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

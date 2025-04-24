@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudySpace - Community</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/community.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+<nav class="main-nav">
+    <div class="nav-logo">StudySpace</div>
+    <ul class="nav-links">
+        <li><a href="index.html"><i class="fas fa-home"></i> Dashboard</a></li>
+        <li><a href="courses.html"><i class="fas fa-book"></i> My Courses</a></li>
+        <li><a href="calendar.html"><i class="fas fa-calendar"></i> Calendar</a></li>
+        <li><a href="resources.html" class="active"><i class="fas fa-folder"></i> Resources</a></li>
+        <li><a href="flashcards.html"><i class="fas fa-clone"></i> Flashcards</a></li>
+        <li><a href="goals.html"><i class="fas fa-bullseye"></i> Goals</a></li>
+        <li><a href="statistics.html"><i class="fas fa-chart-line"></i> Statistics</a></li>
+        <li><a href="community.html"><i class="fas fa-users"></i> Community</a></li>
+        <li><a href="settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+        <li><a href="profile.html"><i class="fas fa-user"></i> Profile</a></li>
+    </ul>
+</nav>
+
+    <div class="container">
+        <header class="page-header">
+            <h1>Community</h1>
+            <p class="subtitle">Connect, collaborate, and learn together</p>
+        </header>
+
+        <div class="community-layout">
+            <!-- Community Actions -->
+            <div class="community-actions">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search communities, discussions, or members..." class="form-control">
+                    <button class="btn btn-icon">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <button class="btn btn-primary">
+                    <i class="fas fa-plus"></i> Create Study Group
+                </button>
+            </div>
+
+            <!-- Main Content Area -->
+            <div class="content-grid">
+                <!-- Left Column - Study Groups -->
+                <div class="groups-section">
+                    <div class="section-header">
+                        <h2>Your Study Groups</h2>
+                        <div class="view-options">
+                            <button class="btn btn-icon active" title="Grid View">
+                                <i class="fas fa-th"></i>
+                            </button>
+                            <button class="btn btn-icon" title="List View">
+                                <i class="fas fa-list"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="groups-grid">
+                        <!-- Active Group Card -->
+                        <div class="group-card active">
+                            <div class="group-header">
+                                <img src="images/group-physics.jpg" alt="Physics Study Group" class="group-image">
+                                <span class="member-count">
+                                    <i class="fas fa-users"></i> 24 members
+                                </span>
+                            </div>
+                            <div class="group-content">
+                                <h3>Advanced Physics</h3>
+                                <p>Quantum mechanics and relativity discussions</p>
+                                <div class="group-meta">
+                                    <span class="activity-status">
+                                        <i class="fas fa-circle active"></i> Active now
+                                    </span>
+                                    <span class="next-session">
+                                        Session in 2 hours
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Regular Group Cards -->
+                        <div class="group-card">
+                            <div class="group-header">
+                                <img src="images/group-math.jpg" alt="Mathematics Group" class="group-image">
+                                <span class="member-count">
+                                    <i class="fas fa-users"></i> 18 members
+                                </span>
+                            </div>
+                            <div class="group-content">
+                                <h3>Calculus Masters</h3>
+                                <p>Advanced calculus problem solving</p>
+                                <div class="group-meta">
+                                    <span class="activity-status">
+                                        <i class="fas fa-circle"></i> 2h ago
+                                    </span>
+                                    <span class="next-session">
+                                        Next: Tomorrow
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="group-card">
+                            <div class="group-header">
+                                <img src="images/group-programming.jpg" alt="Programming Group" class="group-image">
+                                <span class="member-count">
+                                    <i class="fas fa-users"></i> 32 members
+                                </span>
+                            </div>
+                            <div class="group-content">
+                                <h3>Code Warriors</h3>
+                                <p>Web development and algorithms</p>
+                                <div class="group-meta">
+                                    <span class="activity-status">
+                                        <i class="fas fa-circle"></i> 1d ago
+                                    </span>
+                                    <span class="next-session">
+                                        Next: Friday
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column - Activity Feed -->
+                <div class="activity-section">
+                    <div class="section-header">
+                        <h2>Community Activity</h2>
+                        <div class="filter-options">
+                            <select class="form-control">
+                                <option>All Activities</option>
+                                <option>Discussions</option>
+                                <option>Questions</option>
+                                <option>Study Sessions</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="activity-feed">
+                        <!-- Question Post -->
+                        <div class="activity-card">
+                            <div class="activity-header">
+                                <div class="user-info">
+                                    <img src="images/avatar1.jpg" alt="User Avatar" class="user-avatar">
+                                    <div class="post-meta">
+                                        <h4>Sarah Chen</h4>
+                                        <span class="timestamp">15 minutes ago</span>
+                                    </div>
+                                </div>
+                                <div class="post-type question">Question</div>
+                            </div>
+                            <div class="activity-content">
+                                <h3>Help with Quantum Mechanics Problem</h3>
+                                <p>Can someone explain the double-slit experiment and its implications for quantum mechanics?</p>
+                                <div class="post-attachments">
+                                    <span class="attachment">
+                                        <i class="fas fa-image"></i> problem.jpg
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="activity-actions">
+                                <button class="btn btn-text">
+                                    <i class="fas fa-comment"></i> 12 Replies
+                                </button>
+                                <button class="btn btn-text">
+                                    <i class="fas fa-bookmark"></i> Save
+                                </button>
+                                <button class="btn btn-primary">Answer</button>
+                            </div>
+                        </div>
+
+                        <!-- Discussion Post -->
+                        <div class="activity-card">
+                            <div class="activity-header">
+                                <div class="user-info">
+                                    <img src="images/avatar2.jpg" alt="User Avatar" class="user-avatar">
+                                    <div class="post-meta">
+                                        <h4>Alex Thompson</h4>
+                                        <span class="timestamp">1 hour ago</span>
+                                    </div>
+                                </div>
+                                <div class="post-type discussion">Discussion</div>
+                            </div>
+                            <div class="activity-content">
+                                <h3>Modern Web Development Frameworks</h3>
+                                <p>What are your thoughts on React vs Vue for building modern web applications?</p>
+                                <div class="tags">
+                                    <span class="tag">Web Dev</span>
+                                    <span class="tag">JavaScript</span>
+                                    <span class="tag">Frameworks</span>
+                                </div>
+                            </div>
+                            <div class="activity-actions">
+                                <button class="btn btn-text">
+                                    <i class="fas fa-comment"></i> 8 Comments
+                                </button>
+                                <button class="btn btn-text">
+                                    <i class="fas fa-heart"></i> 24 Likes
+                                </button>
+                                <button class="btn btn-primary">Join Discussion</button>
+                            </div>
+                        </div>
+
+                        <!-- Study Session Post -->
+                        <div class="activity-card">
+                            <div class="activity-header">
+                                <div class="user-info">
+                                    <img src="images/avatar3.jpg" alt="User Avatar" class="user-avatar">
+                                    <div class="post-meta">
+                                        <h4>Maria Garcia</h4>
+                                        <span class="timestamp">2 hours ago</span>
+                                    </div>
+                                </div>
+                                <div class="post-type session">Study Session</div>
+                            </div>
+                            <div class="activity-content">
+                                <h3>Group Study: Advanced Calculus</h3>
+                                <p>Join our virtual study session on integration techniques and applications.</p>
+                                <div class="session-details">
+                                    <span><i class="fas fa-calendar"></i> Today, 7:00 PM</span>
+                                    <span><i class="fas fa-clock"></i> 2 hours</span>
+                                    <span><i class="fas fa-users"></i> 5/10 spots</span>
+                                </div>
+                            </div>
+                            <div class="activity-actions">
+                                <button class="btn btn-text">
+                                    <i class="fas fa-share"></i> Share
+                                </button>
+                                <button class="btn btn-primary">Join Session</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recommended Groups -->
+            <section class="recommended-section">
+                <h2>Recommended Groups</h2>
+                <div class="recommended-grid">
+                    <div class="recommended-card">
+                        <img src="images/group-chemistry.jpg" alt="Chemistry Group" class="group-image">
+                        <div class="group-info">
+                            <h3>Chemistry Lab</h3>
+                            <p>Organic chemistry discussions and lab help</p>
+                            <span class="member-count">45 members</span>
+                        </div>
+                        <button class="btn btn-outline">Join Group</button>
+                    </div>
+
+                    <div class="recommended-card">
+                        <img src="images/group-literature.jpg" alt="Literature Group" class="group-image">
+                        <div class="group-info">
+                            <h3>World Literature</h3>
+                            <p>Classic and modern literature analysis</p>
+                            <span class="member-count">32 members</span>
+                        </div>
+                        <button class="btn btn-outline">Join Group</button>
+                    </div>
+
+                    <div class="recommended-card">
+                        <img src="images/group-biology.jpg" alt="Biology Group" class="group-image">
+                        <div class="group-info">
+                            <h3>Biology Hub</h3>
+                            <p>Genetics and evolution studies</p>
+                            <span class="member-count">28 members</span>
+                        </div>
+                        <button class="btn btn-outline">Join Group</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+</html>

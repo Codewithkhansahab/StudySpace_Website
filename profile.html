@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudySpace - Profile</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+<nav class="main-nav">
+    <div class="nav-logo">StudySpace</div>
+    <ul class="nav-links">
+        <li><a href="index.html"><i class="fas fa-home"></i> Dashboard</a></li>
+        <li><a href="courses.html"><i class="fas fa-book"></i> My Courses</a></li>
+        <li><a href="calendar.html"><i class="fas fa-calendar"></i> Calendar</a></li>
+        <li><a href="resources.html" class="active"><i class="fas fa-folder"></i> Resources</a></li>
+        <li><a href="flashcards.html"><i class="fas fa-clone"></i> Flashcards</a></li>
+        <li><a href="goals.html"><i class="fas fa-bullseye"></i> Goals</a></li>
+        <li><a href="statistics.html"><i class="fas fa-chart-line"></i> Statistics</a></li>
+        <li><a href="community.html"><i class="fas fa-users"></i> Community</a></li>
+        <li><a href="settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+        <li><a href="profile.html"><i class="fas fa-user"></i> Profile</a></li>
+    </ul>
+</nav>
+
+    <div class="container">
+        <div class="profile-layout">
+            <!-- Profile Header -->
+            <header class="profile-header">
+                <div class="profile-cover">
+                    <button class="btn btn-icon edit-cover">
+                        <i class="fas fa-camera"></i>
+                    </button>
+                </div>
+                <div class="profile-info">
+                    <div class="profile-avatar">
+                        <img src="images/passportsize.jpg" alt="Profile Picture">
+                        <button class="btn btn-icon edit-avatar">
+                            <i class="fas fa-camera"></i>
+                        </button>
+                    </div>
+                    <div class="profile-details">
+                        <h1>Alex Thompson</h1>
+                        <p class="profile-bio">Computer Science student | Web Development enthusiast</p>
+                        <div class="profile-stats">
+                            <div class="stat">
+                                <span class="stat-value">128</span>
+                                <span class="stat-label">Study Hours</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">15</span>
+                                <span class="stat-label">Groups</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">42</span>
+                                <span class="stat-label">Achievements</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary edit-profile">
+                        <i class="fas fa-edit"></i> Edit Profile
+                    </button>
+                </div>
+            </header>
+
+            <!-- Profile Navigation -->
+            <nav class="profile-nav">
+                <a href="#overview" class="active">Overview</a>
+                <a href="#progress">Progress</a>
+                <a href="#achievements">Achievements</a>
+                <a href="#settings">Settings</a>
+            </nav>
+
+            <!-- Main Content Area -->
+            <div class="profile-content">
+                <!-- Overview Section -->
+                <section id="overview" class="profile-section">
+                    <div class="section-grid">
+                        <!-- Current Goals -->
+                        <div class="overview-card">
+                            <div class="card-header">
+                                <h2>Current Goals</h2>
+                                <button class="btn btn-icon">
+                                    <i class="fas fa-ellipsis-v"></i>
+                                </button>
+                            </div>
+                            <div class="goals-list">
+                                <div class="goal-item">
+                                    <div class="goal-info">
+                                        <h3>Complete JavaScript Course</h3>
+                                        <div class="progress-bar">
+                                            <div class="progress-fill" style="width: 75%"></div>
+                                        </div>
+                                    </div>
+                                    <span class="goal-progress">75%</span>
+                                </div>
+                                <div class="goal-item">
+                                    <div class="goal-info">
+                                        <h3>React Project</h3>
+                                        <div class="progress-bar">
+                                            <div class="progress-fill" style="width: 40%"></div>
+                                        </div>
+                                    </div>
+                                    <span class="goal-progress">40%</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Recent Activity -->
+                        <div class="overview-card">
+                            <div class="card-header">
+                                <h2>Recent Activity</h2>
+                                <button class="btn btn-text">See All</button>
+                            </div>
+                            <div class="activity-list">
+                                <div class="activity-item">
+                                    <div class="activity-icon study">
+                                        <i class="fas fa-book"></i>
+                                    </div>
+                                    <div class="activity-details">
+                                        <p>Completed 2 hours of study session</p>
+                                        <span class="timestamp">2 hours ago</span>
+                                    </div>
+                                </div>
+                                <div class="activity-item">
+                                    <div class="activity-icon achievement">
+                                        <i class="fas fa-trophy"></i>
+                                    </div>
+                                    <div class="activity-details">
+                                        <p>Earned "Coding Streak" achievement</p>
+                                        <span class="timestamp">Yesterday</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Study Statistics -->
+                        <div class="overview-card wide">
+                            <div class="card-header">
+                                <h2>Study Statistics</h2>
+                                <div class="time-filter">
+                                    <button class="btn active">Week</button>
+                                    <button class="btn">Month</button>
+                                    <button class="btn">Year</button>
+                                </div>
+                            </div>
+                            <div class="stats-grid">
+                                <div class="stat-card">
+                                    <div class="stat-icon">
+                                        <i class="fas fa-clock"></i>
+                                    </div>
+                                    <div class="stat-info">
+                                        <span class="stat-value">24h</span>
+                                        <span class="stat-label">Study Time</span>
+                                    </div>
+                                </div>
+                                <div class="stat-card">
+                                    <div class="stat-icon">
+                                        <i class="fas fa-tasks"></i>
+                                    </div>
+                                    <div class="stat-info">
+                                        <span class="stat-value">12</span>
+                                        <span class="stat-label">Tasks Done</span>
+                                    </div>
+                                </div>
+                                <div class="stat-card">
+                                    <div class="stat-icon">
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <div class="stat-info">
+                                        <span class="stat-value">95%</span>
+                                        <span class="stat-label">Success Rate</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="chart-container">
+                                <!-- Chart will be rendered here -->
+                            </div>
+                        </div>
+
+                        <!-- Study Groups -->
+                        <div class="overview-card">
+                            <div class="card-header">
+                                <h2>My Study Groups</h2>
+                                <button class="btn btn-text">View All</button>
+                            </div>
+                            <div class="groups-list">
+                                <div class="group-item">
+                                    <img src="images/group-js.jpg" alt="JavaScript Group" class="group-image">
+                                    <div class="group-info">
+                                        <h3>JavaScript Masters</h3>
+                                        <p>Next session in 2 hours</p>
+                                    </div>
+                                </div>
+                                <div class="group-item">
+                                    <img src="images/group-react.jpg" alt="React Group" class="group-image">
+                                    <div class="group-info">
+                                        <h3>React Development</h3>
+                                        <p>3 new messages</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Achievements Showcase -->
+                        <div class="overview-card">
+                            <div class="card-header">
+                                <h2>Recent Achievements</h2>
+                                <button class="btn btn-text">See All</button>
+                            </div>
+                            <div class="achievements-grid">
+                                <div class="achievement-item">
+                                    <div class="achievement-icon gold">
+                                        <i class="fas fa-trophy"></i>
+                                    </div>
+                                    <div class="achievement-info">
+                                        <h3>Study Streak</h3>
+                                        <p>30 days consecutive study</p>
+                                    </div>
+                                </div>
+                                <div class="achievement-item">
+                                    <div class="achievement-icon silver">
+                                        <i class="fas fa-award"></i>
+                                    </div>
+                                    <div class="achievement-info">
+                                        <h3>Task Master</h3>
+                                        <p>Completed 100 tasks</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit Profile Modal -->
+    <div class="modal" id="editProfileModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Edit Profile</h2>
+                <button class="btn btn-icon close-modal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <form class="profile-form">
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" class="form-control" value="Alex Thompson">
+                </div>
+                <div class="form-group">
+                    <label for="bio">Bio</label>
+                    <textarea id="bio" class="form-control">Computer Science student | Web Development enthusiast</textarea>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" class="form-control" value="alex@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="timezone">Timezone</label>
+                    <select id="timezone" class="form-control">
+                        <option>UTC-8 (Pacific Time)</option>
+                        <option>UTC-5 (Eastern Time)</option>
+                        <option>UTC+0 (GMT)</option>
+                    </select>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn btn-secondary">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Save Changes</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

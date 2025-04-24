@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudySpace - My Courses</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/courses.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="nav-logo">StudySpace</div>
+        <ul class="nav-links">
+            <li><a href="index.html"><i class="fas fa-home"></i> Dashboard</a></li>
+            <li><a href="courses.html" class="active"><i class="fas fa-book"></i> My Courses</a></li>
+            <li><a href="calendar.html"><i class="fas fa-calendar"></i> Calendar</a></li>
+            <li><a href="resources.html"><i class="fas fa-folder"></i> Resources</a></li>
+            <li><a href="flashcards.html"><i class="fas fa-clone"></i> Flashcards</a></li>
+            <li><a href="goals.html"><i class="fas fa-bullseye"></i> Goals</a></li>
+            <li><a href="statistics.html"><i class="fas fa-chart-line"></i> Statistics</a></li>
+            <li><a href="community.html"><i class="fas fa-users"></i> Community</a></li>
+            <li><a href="settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+            <li><a href="profile.html"><i class="fas fa-user"></i> Profile</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <header class="page-header">
+            <h1>My Courses</h1>
+            <p class="subtitle">Manage and track your courses</p>
+        </header>
+
+        <div class="courses-controls">
+            <form action="/add-course" method="get" class="inline-form">
+                <button type="submit" class="btn btn-primary">
+                    <i class="fas fa-plus"></i> Add New Course
+                </button>
+            </form>
+            <form action="/filter-courses" method="get" class="inline-form">
+                <select name="semester" class="form-control">
+                    <option value="">All Semesters</option>
+                    <option value="current">Current Semester</option>
+                    <option value="previous">Previous Semester</option>
+                </select>
+                <button type="submit" class="btn">Filter</button>
+            </form>
+        </div>
+
+        <div class="courses-grid">
+            <!-- Active Courses -->
+            <div class="card course-card">
+                <div class="course-header">
+                    <i class="fas fa-calculator course-icon"></i>
+                    <h2>Advanced Mathematics</h2>
+                    <span class="course-status active">Active</span>
+                </div>
+                <div class="course-progress">
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 75%"></div>
+                    </div>
+                    <span class="progress-text">75% Complete</span>
+                </div>
+                <div class="course-details">
+                    <p><i class="fas fa-user"></i> Prof. Johnson</p>
+                    <p><i class="fas fa-clock"></i> MWF 10:00 AM</p>
+                </div>
+                <div class="course-actions">
+                    <a href="course-details.html?id=math101" class="btn">View Details</a>
+                    <a href="course-materials.html?id=math101" class="btn btn-secondary">Materials</a>
+                </div>
+            </div>
+
+            <div class="card course-card">
+                <div class="course-header">
+                    <i class="fas fa-laptop-code course-icon"></i>
+                    <h2>Web Development</h2>
+                    <span class="course-status active">Active</span>
+                </div>
+                <div class="course-progress">
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 60%"></div>
+                    </div>
+                    <span class="progress-text">60% Complete</span>
+                </div>
+                <div class="course-details">
+                    <p><i class="fas fa-user"></i> Prof. Smith</p>
+                    <p><i class="fas fa-clock"></i> TTh 2:00 PM</p>
+                </div>
+                <div class="course-actions">
+                    <a href="course-details.html?id=web101" class="btn">View Details</a>
+                    <a href="course-materials.html?id=web101" class="btn btn-secondary">Materials</a>
+                </div>
+            </div>
+
+            <div class="card course-card">
+                <div class="course-header">
+                    <i class="fas fa-atom course-icon"></i>
+                    <h2>Physics</h2>
+                    <span class="course-status upcoming">Upcoming</span>
+                </div>
+                <div class="course-details">
+                    <p><i class="fas fa-user"></i> Prof. Davis</p>
+                    <p><i class="fas fa-clock"></i> MWF 1:00 PM</p>
+                </div>
+                <div class="course-actions">
+                    <a href="course-details.html?id=phys101" class="btn">View Details</a>
+                    <a href="course-materials.html?id=phys101" class="btn btn-secondary">Materials</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Completed Courses Section -->
+        <h2 class="section-title">Completed Courses</h2>
+        <div class="courses-grid">
+            <div class="card course-card completed">
+                <div class="course-header">
+                    <i class="fas fa-book course-icon"></i>
+                    <h2>Introduction to Literature</h2>
+                    <span class="course-status completed">Completed</span>
+                </div>
+                <div class="course-details">
+                    <p><i class="fas fa-award"></i> Grade: A</p>
+                    <p><i class="fas fa-calendar-check"></i> Fall 2023</p>
+                </div>
+                <div class="course-actions">
+                    <a href="course-details.html?id=lit101" class="btn">View Details</a>
+                    <a href="course-materials.html?id=lit101" class="btn btn-secondary">Materials</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
