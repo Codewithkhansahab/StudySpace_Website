@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* calendar.css */
 .calendar-controls {
     display: flex;
@@ -200,6 +201,8 @@
         justify-content: flex-end;
     }
 }
+=======
+>>>>>>> 511509d5e211f2cf8f9aca6890c85f6b3f8b1a37
 .calendar-container {
     background: white;
     border-radius: 10px;

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* resources.css */
 .resources-layout {
     display: grid;
@@ -185,10 +186,57 @@
 .resource-info {
     flex: 1;
     min-width: 0;
+=======
+.resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.resource-category {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.resource-category h2 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #f0f2f5;
+}
+
+.resource-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.resource-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.resource-item:hover {
+    transform: translateX(5px);
+    background: #e9ecef;
+}
+
+.resource-icon {
+    font-size: 2em;
+    margin-right: 15px;
+>>>>>>> 511509d5e211f2cf8f9aca6890c85f6b3f8b1a37
 }
 
 .resource-info h3 {
     margin: 0;
+<<<<<<< HEAD
     font-size: 1rem;
     white-space: nowrap;
     overflow: hidden;
@@ -242,4 +290,13 @@
         width: 100%;
         justify-content: center;
     }
+=======
+    color: #2c3e50;
+}
+
+.resource-info p {
+    margin: 5px 0 0;
+    color: #6c757d;
+    font-size: 0.9em;
+>>>>>>> 511509d5e211f2cf8f9aca6890c85f6b3f8b1a37
 }

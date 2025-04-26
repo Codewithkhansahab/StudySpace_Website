@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* community.css */
 :root {
     --activity-question: #2196F3;
@@ -176,6 +177,8 @@ form {
         grid-template-columns: 1fr;
     }
 }
+=======
+>>>>>>> 511509d5e211f2cf8f9aca6890c85f6b3f8b1a37
 .community-container {
     display: grid;
     grid-template-columns: 300px 1fr;
@@ -282,6 +285,7 @@ form {
     .community-container {
         grid-template-columns: 1fr;
     }
+<<<<<<< HEAD
 }
 .community-layout {
     display: flex;
@@ -639,4 +643,6 @@ form {
         break-inside: avoid;
         box-shadow: none;
     }
+=======
+>>>>>>> 511509d5e211f2cf8f9aca6890c85f6b3f8b1a37
 }

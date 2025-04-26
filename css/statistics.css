@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* statistics.css */
 :root {
     --metric-primary: #2196F3;
@@ -275,6 +276,8 @@
     }
 }
 
+=======
+>>>>>>> 511509d5e211f2cf8f9aca6890c85f6b3f8b1a37
 .stats-container {
     max-width: 1000px;
     margin: 0 auto;
@@ -302,6 +305,17 @@
     font-weight: bold;
 }
 
+<<<<<<< HEAD
+=======
+.chart-container {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+>>>>>>> 511509d5e211f2cf8f9aca6890c85f6b3f8b1a37
 .bar-chart {
     display: flex;
     justify-content: space-between;

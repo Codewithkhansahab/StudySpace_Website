@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* courses.css */
 .courses-controls {
     display: flex;
@@ -129,6 +130,8 @@
         flex-direction: column;
     }
 }
+=======
+>>>>>>> 511509d5e211f2cf8f9aca6890c85f6b3f8b1a37
 .courses-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));

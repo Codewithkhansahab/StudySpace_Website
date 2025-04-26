@@ -1,13 +1,19 @@
 .dashboard {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+<<<<<<< HEAD
     gap: 25px;
     padding: 20px;
     animation: fadeIn 0.8s ease;
+=======
+    gap: 20px;
+    padding: 20px;
+>>>>>>> 511509d5e211f2cf8f9aca6890c85f6b3f8b1a37
 }
 
 .widget {
     background: white;
+<<<<<<< HEAD
     border-radius: 15px;
     padding: 25px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -35,6 +41,11 @@
     width: 50px;
     height: 2px;
     background: var(--primary-color);
+=======
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+>>>>>>> 511509d5e211f2cf8f9aca6890c85f6b3f8b1a37
 }
 
 /* Tasks Widget */
@@ -44,6 +55,7 @@
 }
 
 .task-list li {
+<<<<<<< HEAD
     display: flex;
     align-items: center;
     padding: 0.5rem 0;
@@ -60,10 +72,26 @@
     margin: 1rem 0;
     font-weight: bold;
     color: var(--primary-color);
+=======
+    padding: 10px;
+    margin: 5px 0;
+    background: #f8f9fa;
+    border-radius: 5px;
+}
+
+/* Timer Widget */
+.timer-display {
+    font-size: 2.5em;
+    text-align: center;
+    margin: 20px 0;
+    font-weight: bold;
+    color: #2c3e50;
+>>>>>>> 511509d5e211f2cf8f9aca6890c85f6b3f8b1a37
 }
 
 .timer-controls {
     display: flex;
+<<<<<<< HEAD
     gap: 1rem;
     justify-content: center;
 }
@@ -91,10 +119,15 @@
 .timer-controls button:hover {
     transform: scale(1.05);
     opacity: 0.9;
+=======
+    justify-content: center;
+    gap: 10px;
+>>>>>>> 511509d5e211f2cf8f9aca6890c85f6b3f8b1a37
 }
 
 /* Notes Widget */
 .note {
+<<<<<<< HEAD
     background: var(--background-light);
     padding: 1rem;
     border-radius: 5px;
@@ -114,15 +147,26 @@
     padding: 5px;
     border-radius: 50%;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+=======
+    background: #fff9c4;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+>>>>>>> 511509d5e211f2cf8f9aca6890c85f6b3f8b1a37
 }
 
 /* Progress Widget */
 .progress-item {
+<<<<<<< HEAD
     margin-bottom: 1rem;
+=======
+    margin-bottom: 15px;
+>>>>>>> 511509d5e211f2cf8f9aca6890c85f6b3f8b1a37
 }
 
 .progress-item span {
     display: block;
+<<<<<<< HEAD
     margin-bottom: 8px;
     color: var(--dark-color);
     font-weight: 500;
@@ -140,14 +184,34 @@
     height: 100%;
     border-radius: 5px;
     transition: width var(--transition-speed) ease;
+=======
+    margin-bottom: 5px;
+}
+
+.progress-bar {
+    background: #eee;
+    height: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: #2ecc71;
+    border-radius: 5px;
+    transition: width 0.3s ease;
+>>>>>>> 511509d5e211f2cf8f9aca6890c85f6b3f8b1a37
 }
 
 @media (max-width: 768px) {
     .dashboard {
         grid-template-columns: 1fr;
     }
+<<<<<<< HEAD
     
     .widget {
         margin-bottom: 20px;
     }
+=======
+>>>>>>> 511509d5e211f2cf8f9aca6890c85f6b3f8b1a37
 }
