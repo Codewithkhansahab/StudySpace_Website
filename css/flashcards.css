@@ -1,302 +1,4 @@
-<<<<<<< HEAD
-/* flashcards.css */
-.flashcards-layout {
-    display: grid;
-    grid-template-columns: 300px 1fr;
-    gap: 2rem;
-    margin-top: 2rem;
-}
-
-/* Sidebar Styles */
-.decks-sidebar {
-    background: white;
-    border-radius: var(--border-radius);
-    padding: 1.5rem;
-    box-shadow: var(--shadow);
-    height: fit-content;
-}
-
-.sidebar-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1.5rem;
-}
-
-.sidebar-header h2 {
-    margin: 0;
-    font-size: 1.25rem;
-}
-
-.deck-list {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.deck-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-    text-decoration: none;
-    color: var(--text-dark);
-    border-radius: var(--border-radius);
-    background: var(--background-light);
-    transition: all var(--transition-speed) ease;
-}
-
-.deck-item:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--shadow);
-}
-
-.deck-item.active {
-    background: var(--primary-color);
-    color: white;
-}
-
-.deck-info {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-.deck-details h3 {
-    margin: 0;
-    font-size: 1rem;
-}
-
-.deck-details p {
-    margin: 0.25rem 0 0;
-    font-size: 0.875rem;
-    opacity: 0.8;
-}
-
-.deck-progress {
-    font-weight: bold;
-}
-
-/* Study Area Styles */
-.study-area {
-    background: white;
-    border-radius: var(--border-radius);
-    padding: 2rem;
-    box-shadow: var(--shadow);
-}
-
-.study-controls {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 2rem;
-}
-
-.deck-title h2 {
-    margin: 0;
-    font-size: 1.5rem;
-}
-
-.card-count {
-    color: var(--text-light);
-    font-size: 0.875rem;
-}
-
-.study-actions {
-    display: flex;
-    gap: 1rem;
-}
-
-/* Flashcard Styles */
-.flashcard {
-    perspective: 1000px;
-    margin: 2rem 0;
-    height: 400px;
-}
-
-.flashcard-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-    cursor: pointer;
-}
-
-.flashcard:hover .flashcard-inner {
-    transform: rotateY(180deg);
-}
-
-.flashcard-front, .flashcard-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    border-radius: var(--border-radius);
-    background: var(--background-light);
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.flashcard-back {
-    transform: rotateY(180deg);
-}
-
-.card-content {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.formula {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin: 1rem 0;
-    color: var(--primary-color);
-}
-
-.card-footer {
-    border-top: 1px solid #eee;
-    padding-top: 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.difficulty {
-    padding: 0.25rem 0.75rem;
-    border-radius: 15px;
-    font-size: 0.875rem;
-}
-
-.difficulty.easy {
-    background: #e8f5e9;
-    color: #2e7d32;
-}
-
-.difficulty.medium {
-    background: #fff3e0;
-    color: #f57c00;
-}
-
-.difficulty.hard {
-    background: #ffebee;
-    color: #c62828;
-}
-
-.difficulty-buttons {
-    display: flex;
-    gap: 0.5rem;
-}
-
-.btn-difficulty {
-    padding: 0.5rem 1rem;
-    border: none;
-    border-radius: 15px;
-    cursor: pointer;
-    font-size: 0.875rem;
-    transition: all var(--transition-speed) ease;
-}
-
-.btn-difficulty.easy {
-    background: #e8f5e9;
-    color: #2e7d32;
-}
-
-.btn-difficulty.medium {
-    background: #fff3e0;
-    color: #f57c00;
-}
-
-.btn-difficulty.hard {
-    background: #ffebee;
-    color: #c62828;
-}
-
-/* Navigation Controls */
-.card-navigation {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    margin: 2rem 0;
-}
-
-/* Study Statistics */
-.study-stats {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-    margin-top: 2rem;
-}
-
-.stat-card {
-    background: var(--background-light);
-    padding: 1rem;
-    border-radius: var(--border-radius);
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-.stat-card i {
-    font-size: 1.5rem;
-    color: var(--primary-color);
-}
-
-.stat-info h4 {
-    margin: 0;
-    font-size: 0.875rem;
-    color: var(--text-light);
-}
-
-.stat-info p {
-    margin: 0.25rem 0 0;
-    font-weight: bold;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .flashcards-layout {
-        grid-template-columns: 1fr;
-    }
-
-    .study-controls {
-        flex-direction: column;
-        gap: 1rem;
-        text-align: center;
-    }
-
-    .study-actions {
-        width: 100%;
-        justify-content: center;
-    }
-
-    .study-stats {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 480px) {
-    .flashcard {
-        height: 300px;
-    }
-
-    .card-content {
-        font-size: 0.875rem;
-    }
-
-    .formula {
-        font-size: 1.25rem;
-    }
-}
-=======
->>>>>>> 511509d5e211f2cf8f9aca6890c85f6b3f8b1a37
-.flashcards-container {
+ .flashcards-container {
     max-width: 800px;
     margin: 0 auto;
 }
@@ -369,4 +71,262 @@
 
 .prev-btn, .next-btn {
     padding: 10px 20px;
+}
+.flashcards-layout {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* Sidebar Styles */
+.decks-sidebar {
+    background: white;
+    border-radius: var(--border-radius);
+    padding: var(--card-padding);
+    box-shadow: var(--shadow);
+    height: fit-content;
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.deck-search {
+    margin-bottom: 1rem;
+}
+
+.deck-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.deck-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    background: var(--background-light);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.deck-item:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+}
+
+.deck-item.active {
+    background: var(--primary-color);
+    color: white;
+}
+
+.deck-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    font-size: 1.2rem;
+}
+
+.deck-info {
+    flex: 1;
+}
+
+.deck-info h3 {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.deck-info p {
+    margin: 0.25rem 0 0;
+    font-size: 0.875rem;
+    opacity: 0.8;
+}
+
+/* Study Area Styles */
+.study-area {
+    background: white;
+    border-radius: var(--border-radius);
+    padding: var(--card-padding);
+    box-shadow: var(--shadow);
+}
+
+.study-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.study-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+/* Flashcard Styles */
+.flashcard {
+    perspective: 1000px;
+    width: 100%;
+    max-width: 600px;
+    height: 400px;
+    margin: 0 auto;
+    position: relative;
+    cursor: pointer;
+}
+
+.flashcard-content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.flashcard.flipped .flashcard-content {
+    transform: rotateY(180deg);
+}
+
+.front, .back {
+    backface-visibility: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.back {
+    transform: rotateY(180deg);
+}
+
+.card-text {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.card-hint {
+    font-size: 0.875rem;
+    color: var(--text-light);
+    margin-top: auto;
+}
+
+.card-explanation {
+    font-size: 1rem;
+    color: var(--text-light);
+    margin-top: 1rem;
+}
+
+/* Study Progress */
+.study-progress {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.progress-bar {
+    height: 4px;
+    background: var(--background-light);
+    border-radius: 2px;
+    margin-bottom: 0.5rem;
+}
+
+.progress-fill {
+    height: 100%;
+    background: var(--primary-color);
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+/* Rating Buttons */
+.rating-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+/* Card Management */
+.card-management {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.card-list {
+    margin: 1rem 0;
+}
+
+.card-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: var(--background-light);
+    border-radius: var(--border-radius);
+    margin-bottom: 0.5rem;
+}
+
+.card-preview {
+    display: flex;
+    gap: 2rem;
+}
+
+.preview-front, .preview-back {
+    min-width: 200px;
+}
+
+.card-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.add-card {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .flashcards-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .decks-sidebar {
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .study-controls {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .rating-buttons {
+        flex-wrap: wrap;
+    }
+
+    .flashcard {
+        height: 300px;
+    }
+
+    .card-preview {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
 }

@@ -3,368 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
     <title>StudySpace - Statistics</title>
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/statistics.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <!-- Add Chart.js for visualizations -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-<nav class="main-nav">
-    <div class="nav-logo">StudySpace</div>
-    <ul class="nav-links">
-        <li><a href="index.html"><i class="fas fa-home"></i> Dashboard</a></li>
-        <li><a href="courses.html"><i class="fas fa-book"></i> My Courses</a></li>
-        <li><a href="calendar.html"><i class="fas fa-calendar"></i> Calendar</a></li>
-        <li><a href="resources.html" class="active"><i class="fas fa-folder"></i> Resources</a></li>
-        <li><a href="flashcards.html"><i class="fas fa-clone"></i> Flashcards</a></li>
-        <li><a href="goals.html"><i class="fas fa-bullseye"></i> Goals</a></li>
-        <li><a href="statistics.html"><i class="fas fa-chart-line"></i> Statistics</a></li>
-        <li><a href="community.html"><i class="fas fa-users"></i> Community</a></li>
-        <li><a href="settings.html"><i class="fas fa-cog"></i> Settings</a></li>
-        <li><a href="profile.html"><i class="fas fa-user"></i> Profile</a></li>
-    </ul>
-</nav>
+    <nav class="main-nav">
+        <div class="nav-logo">StudySpace</div>
+        <ul class="nav-links">
+            <li><a href="index.html"><i class="fas fa-home"></i> Dashboard</a></li>
+            <li><a href="courses.html"><i class="fas fa-book"></i> My Courses</a></li>
+            <li><a href="calendar.html"><i class="fas fa-calendar"></i> Calendar</a></li>
+            <li><a href="resources.html"><i class="fas fa-folder"></i> Resources</a></li>
+            <li><a href="flashcards.html"><i class="fas fa-clone"></i> Flashcards</a></li>
+            <li><a href="goals.html"><i class="fas fa-bullseye"></i> Goals</a></li>
+            <li><a href="statistics.html" class="active"><i class="fas fa-chart-line"></i> Statistics</a></li>
+            <li><a href="community.html"><i class="fas fa-users"></i> Community</a></li>
+            <li><a href="settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+            <li><a href="profile.html"><i class="fas fa-user"></i> Profile</a></li>
+        </ul>
+    </nav>
 
     <div class="container">
         <header class="page-header">
             <h1>Statistics</h1>
-            <p class="subtitle">Track your study progress and achievements</p>
+            <p class="subtitle">Track your study progress</p>
         </header>
 
-        <div class="stats-layout">
+        <div class="stats-container">
             <!-- Time Range Filter -->
-            <div class="time-filter-section">
-                <div class="date-range">
+            <div class="time-filter">
+                <div class="filter-buttons">
                     <button class="btn active">Week</button>
                     <button class="btn">Month</button>
                     <button class="btn">Semester</button>
                     <button class="btn">Year</button>
                 </div>
-                <div class="custom-range">
-                    <input type="date" class="form-control" id="startDate">
+                <div class="date-range">
+                    <input type="date" class="form-control">
                     <span>to</span>
-                    <input type="date" class="form-control" id="endDate">
+                    <input type="date" class="form-control">
                     <button class="btn btn-primary">Apply</button>
                 </div>
             </div>
 
-            <!-- Key Metrics -->
-            <div class="metrics-grid">
-                <div class="metric-card">
-                    <div class="metric-icon">
+            <!-- Overview Cards -->
+            <div class="stats-overview">
+                <div class="stat-card">
+                    <div class="stat-icon">
                         <i class="fas fa-clock"></i>
                     </div>
-                    <div class="metric-info">
-                        <h3>Total Study Time</h3>
-                        <p class="metric-value">42.5 hours</p>
-                        <span class="metric-change positive">
+                    <div class="stat-content">
+                        <h3>Study Time</h3>
+                        <div class="stat-value">42.5 hrs</div>
+                        <div class="stat-change positive">
                             <i class="fas fa-arrow-up"></i> 15% vs last week
-                        </span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="metric-card">
-                    <div class="metric-icon">
-                        <i class="fas fa-check-circle"></i>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-tasks"></i>
                     </div>
-                    <div class="metric-info">
+                    <div class="stat-content">
                         <h3>Tasks Completed</h3>
-                        <p class="metric-value">24</p>
-                        <span class="metric-change positive">
+                        <div class="stat-value">24</div>
+                        <div class="stat-change positive">
                             <i class="fas fa-arrow-up"></i> 8 more than last week
-                        </span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="metric-card">
-                    <div class="metric-icon">
+                <div class="stat-card">
+                    <div class="stat-icon">
                         <i class="fas fa-bullseye"></i>
                     </div>
-                    <div class="metric-info">
+                    <div class="stat-content">
                         <h3>Goals Achieved</h3>
-                        <p class="metric-value">12</p>
-                        <span class="metric-change positive">
+                        <div class="stat-value">12</div>
+                        <div class="stat-change positive">
                             <i class="fas fa-arrow-up"></i> 3 this week
-                        </span>
-                    </div>
-                </div>
-
-                <div class="metric-card">
-                    <div class="metric-icon">
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <div class="metric-info">
-                        <h3>Average Grade</h3>
-                        <p class="metric-value">A-</p>
-                        <span class="metric-change neutral">
-                            No change from last week
-                        </span>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Charts Section -->
+            <!-- Charts Grid -->
             <div class="charts-grid">
-                <!-- Study Time Distribution -->
                 <div class="chart-card">
                     <div class="chart-header">
                         <h3>Study Time Distribution</h3>
                         <div class="chart-actions">
-                            <button class="btn btn-icon" title="Download">
-                                <i class="fas fa-download"></i>
-                            </button>
-                            <button class="btn btn-icon" title="Full Screen">
-                                <i class="fas fa-expand"></i>
-                            </button>
+                            <button class="btn btn-icon"><i class="fas fa-download"></i></button>
+                            <button class="btn btn-icon"><i class="fas fa-expand"></i></button>
                         </div>
                     </div>
                     <div class="chart-container">
-                        <canvas id="studyTimeChart"></canvas>
+                        <canvas id="studyDistributionChart"></canvas>
                     </div>
                 </div>
 
-                <!-- Subject Performance -->
                 <div class="chart-card">
                     <div class="chart-header">
                         <h3>Subject Performance</h3>
                         <div class="chart-actions">
-                            <button class="btn btn-icon" title="Download">
-                                <i class="fas fa-download"></i>
-                            </button>
-                            <button class="btn btn-icon" title="Full Screen">
-                                <i class="fas fa-expand"></i>
-                            </button>
+                            <button class="btn btn-icon"><i class="fas fa-download"></i></button>
+                            <button class="btn btn-icon"><i class="fas fa-expand"></i></button>
                         </div>
                     </div>
                     <div class="chart-container">
-                        <canvas id="performanceChart"></canvas>
+                        <canvas id="subjectPerformanceChart"></canvas>
                     </div>
                 </div>
 
-                <!-- Progress Timeline -->
-                <div class="chart-card wide">
+                <div class="chart-card full-width">
                     <div class="chart-header">
-                        <h3>Progress Timeline</h3>
+                        <h3>Weekly Progress</h3>
                         <div class="chart-actions">
-                            <button class="btn btn-icon" title="Download">
-                                <i class="fas fa-download"></i>
-                            </button>
-                            <button class="btn btn-icon" title="Full Screen">
-                                <i class="fas fa-expand"></i>
-                            </button>
+                            <button class="btn btn-icon"><i class="fas fa-download"></i></button>
+                            <button class="btn btn-icon"><i class="fas fa-expand"></i></button>
                         </div>
                     </div>
                     <div class="chart-container">
-                        <canvas id="progressChart"></canvas>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Achievements Section -->
-            <div class="achievements-section">
-                <h2>Recent Achievements</h2>
-                <div class="achievements-grid">
-                    <div class="achievement-card">
-                        <div class="achievement-icon gold">
-                            <i class="fas fa-trophy"></i>
-                        </div>
-                        <div class="achievement-info">
-                            <h3>Study Streak Master</h3>
-                            <p>Maintained a 30-day study streak</p>
-                            <span class="achievement-date">Earned 2 days ago</span>
-                        </div>
-                    </div>
-
-                    <div class="achievement-card">
-                        <div class="achievement-icon silver">
-                            <i class="fas fa-award"></i>
-                        </div>
-                        <div class="achievement-info">
-                            <h3>Goal Crusher</h3>
-                            <p>Completed 10 goals in one week</p>
-                            <span class="achievement-date">Earned 1 week ago</span>
-                        </div>
-                    </div>
-
-                    <div class="achievement-card">
-                        <div class="achievement-icon bronze">
-                            <i class="fas fa-medal"></i>
-                        </div>
-                        <div class="achievement-info">
-                            <h3>Focus Champion</h3>
-                            <p>Studied for 4 hours without breaks</p>
-                            <span class="achievement-date">Earned 2 weeks ago</span>
-=======
-    <title>Statistics - StudySpace</title>
-    <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/statistics.css">
-</head>
-<body>
-    <nav style="display: flex; align-items: center;" class="main-nav">
-        <!-- Same navigation as other pages -->
-        <div class="nav-logo">StudySpace</div>
-        <ul class="nav-links">
-            <li><a href="index.html">Dashboard</a></li>
-            <li><a href="courses.html" class="active">My Courses</a></li>
-            <li><a href="calendar.html">Calendar</a></li>
-            <li><a href="resources.html">Resources</a></li>
-            <li><a href="flashcards.html">Flashcards</a></li>
-            <li><a href="goals.html">Goals</a></li>
-            <li><a href="statistics.html">Statistics</a></li>
-            <li><a href="community.html">Community</a></li>
-            <li><a href="settings.html">Settings</a></li>
-            <li><a href="profile.html">Profile</a></li>
-        </ul>
-    </nav>
-
-    <div class="container">
-        <header>
-            <h1>Study Statistics</h1>
-            <p class="subtitle">Track Your Learning Progress</p>
-        </header>
-
-        <div class="stats-container">
-            <div class="stats-overview">
-                <div class="stat-card">
-                    <h3>Study Time</h3>
-                    <div class="stat-value">24.5 hrs</div>
-                    <p>This Week</p>
-                </div>
-                <div class="stat-card">
-                    <h3>Tasks Completed</h3>
-                    <div class="stat-value">15</div>
-                    <p>This Week</p>
-                </div>
-                <div class="stat-card">
-                    <h3>Flashcards Reviewed</h3>
-                    <div class="stat-value">120</div>
-                    <p>This Week</p>
-                </div>
-            </div>
-
-            <div class="stats-detail">
-                <div class="chart-container">
-                    <h3>Study Time Distribution</h3>
-                    <div class="chart-placeholder">
-                        <!-- Placeholder for chart -->
-                        <div class="bar-chart">
-                            <div class="bar" style="height: 60%">Mon</div>
-                            <div class="bar" style="height: 80%">Tue</div>
-                            <div class="bar" style="height: 40%">Wed</div>
-                            <div class="bar" style="height: 90%">Thu</div>
-                            <div class="bar" style="height: 70%">Fri</div>
-                            <div class="bar" style="height: 30%">Sat</div>
-                            <div class="bar" style="height: 50%">Sun</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="subject-stats">
-                    <h3>Subject Performance</h3>
-                    <div class="subject-progress">
-                        <div class="subject">
-                            <span>Mathematics</span>
-                            <div class="progress-bar">
-                                <div class="progress-fill" style="width: 85%"></div>
-                            </div>
-                            <span>85%</span>
-                        </div>
-                        <div class="subject">
-                            <span>Physics</span>
-                            <div class="progress-bar">
-                                <div class="progress-fill" style="width: 70%"></div>
-                            </div>
-                            <span>70%</span>
->>>>>>> 511509d5e211f2cf8f9aca6890c85f6b3f8b1a37
-                        </div>
+                        <canvas id="weeklyProgressChart"></canvas>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-<<<<<<< HEAD
 
-    <script>
-        // Initialize Charts
-        document.addEventListener('DOMContentLoaded', function() {
-            // Study Time Distribution Chart
-            const studyTimeCtx = document.getElementById('studyTimeChart').getContext('2d');
-            new Chart(studyTimeCtx, {
-                type: 'doughnut',
-                data: {
-                    labels: ['Mathematics', 'Physics', 'Programming', 'Literature', 'History'],
-                    datasets: [{
-                        data: [30, 25, 20, 15, 10],
-                        backgroundColor: [
-                            '#4CAF50',
-                            '#2196F3',
-                            '#9C27B0',
-                            '#FF9800',
-                            '#F44336'
-                        ]
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false
-                }
-            });
-
-            // Subject Performance Chart
-            const performanceCtx = document.getElementById('performanceChart').getContext('2d');
-            new Chart(performanceCtx, {
-                type: 'radar',
-                data: {
-                    labels: ['Mathematics', 'Physics', 'Programming', 'Literature', 'History'],
-                    datasets: [{
-                        label: 'Current Performance',
-                        data: [90, 85, 95, 80, 75],
-                        borderColor: '#2196F3',
-                        backgroundColor: 'rgba(33, 150, 243, 0.2)'
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    scales: {
-                        r: {
-                            beginAtZero: true,
-                            max: 100
-                        }
-                    }
-                }
-            });
-
-            // Progress Timeline Chart
-            const progressCtx = document.getElementById('progressChart').getContext('2d');
-            new Chart(progressCtx, {
-                type: 'line',
-                data: {
-                    labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
-                    datasets: [{
-                        label: 'Study Hours',
-                        data: [4, 6, 5, 8, 7, 4, 6],
-                        borderColor: '#4CAF50',
-                        backgroundColor: 'rgba(76, 175, 80, 0.1)',
-                        fill: true
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    scales: {
-                        y: {
-                            beginAtZero: true
-                        }
-                    }
-                }
-            });
-        });
-    </script>
-=======
->>>>>>> 511509d5e211f2cf8f9aca6890c85f6b3f8b1a37
+    <script src="js/statistics.js"></script>
 </body>
 </html>

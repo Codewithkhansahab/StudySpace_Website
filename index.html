@@ -6,7 +6,6 @@
     <title>StudySpace - Personal Study Assistant</title>
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/dashboard.css">
-<<<<<<< HEAD
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -23,43 +22,22 @@
             <li><a href="community.html"><i class="fas fa-users"></i> Community</a></li>
             <li><a href="settings.html"><i class="fas fa-cog"></i> Settings</a></li>
             <li><a href="profile.html"><i class="fas fa-user"></i> Profile</a></li>
-=======
-</head>
-<body>
-    <nav style="display: flex; align-items: center;" class="main-nav">
-        <div class="nav-logo" style="text-align: center;">StudySpace</div>
-        <ul class="nav-links">
-            <li><a href="index.html" class="active">Dashboard</a></li>
-            <li><a href="courses.html">My Courses</a></li>
-            <li><a href="calendar.html">Calendar</a></li>
-            <li><a href="resources.html">Resources</a></li>
-            <li><a href="flashcards.html">Flashcards</a></li>
-            <li><a href="goals.html">Goals</a></li>
-            <li><a href="statistics.html">Statistics</a></li>
-            <li><a href="community.html">Community</a></li>
-            <li><a href="settings.html">Settings</a></li>
-            <li><a href="profile.html">Profile</a></li>
->>>>>>> 511509d5e211f2cf8f9aca6890c85f6b3f8b1a37
         </ul>
     </nav>
 
     <div class="container">
-<<<<<<< HEAD
         <header class="page-header">
-=======
-        <header>
->>>>>>> 511509d5e211f2cf8f9aca6890c85f6b3f8b1a37
             <h1>StudySpace</h1>
             <p class="subtitle">Your Personal Study Assistant</p>
         </header>
 
-<<<<<<< HEAD
         <div class="dashboard grid">
             <div class="card tasks">
                 <h2><i class="fas fa-tasks"></i> Tasks</h2>
                 <form action="/add-task" method="post" class="task-form">
                     <div class="form-group">
                         <input type="text" name="task" class="form-control" placeholder="Add new task...">
+                        <button type="submit" class="btn btn-primary"><i class="fas fa-plus"></i></button>
                     </div>
                 </form>
                 <ul class="task-list">
@@ -85,10 +63,10 @@
             <div class="card timer">
                 <h2><i class="fas fa-clock"></i> Study Timer</h2>
                 <div class="timer-display">25:00</div>
-                <form action="/timer-control" method="post" class="timer-controls">
-                    <button type="submit" name="action" value="start" class="btn">Start</button>
-                    <button type="submit" name="action" value="reset" class="btn btn-secondary">Reset</button>
-                </form>
+                <div class="timer-controls">
+                    <button class="btn btn-primary start">Start</button>
+                    <button class="btn btn-secondary reset">Reset</button>
+                </div>
             </div>
 
             <div class="card notes">
@@ -96,62 +74,41 @@
                 <form action="/add-note" method="post" class="note-form">
                     <div class="form-group">
                         <textarea class="form-control" name="note" placeholder="Add a new note..."></textarea>
+                        <button type="submit" class="btn btn-primary">Add Note</button>
                     </div>
-                    <button type="submit" class="btn">Add Note</button>
                 </form>
-=======
-        <div class="dashboard">
-            <div class="widget tasks">
-                <h2>Tasks</h2>
-                <ul class="task-list">
-                    <li>Complete Math Assignment</li>
-                    <li>Read Chapter 5 - History</li>
-                    <li>Practice Programming</li>
-                    <li>Review Study Notes</li>
-                </ul>
-            </div>
-
-            <div class="widget timer">
-                <h2>Study Timer</h2>
-                <div class="timer-display">25:00</div>
-                <div class="timer-controls">
-                    <button class="start">Start</button>
-                    <button class="reset">Reset</button>
+                <div class="notes-list">
+                    <div class="note">
+                        <p>Remember to review key concepts before the exam</p>
+                    </div>
+                    <div class="note">
+                        <p>Group study session on Thursday</p>
+                    </div>
                 </div>
             </div>
 
-            <div class="widget notes">
-                <h2>Quick Notes</h2>
->>>>>>> 511509d5e211f2cf8f9aca6890c85f6b3f8b1a37
-                <div class="note">
-                    <p>Remember to review key concepts before the exam</p>
-                </div>
-                <div class="note">
-                    <p>Group study session on Thursday</p>
-                </div>
-            </div>
-
-<<<<<<< HEAD
             <div class="card progress">
                 <h2><i class="fas fa-chart-bar"></i> Progress Tracking</h2>
-=======
-            <div class="widget progress">
-                <h2>Progress Tracking</h2>
->>>>>>> 511509d5e211f2cf8f9aca6890c85f6b3f8b1a37
-                <div class="progress-item">
-                    <span>Mathematics</span>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 75%"></div>
+                <div class="progress-items">
+                    <div class="progress-item">
+                        <span>Mathematics</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 75%"></div>
+                        </div>
+                        <span class="progress-percentage">75%</span>
                     </div>
-                </div>
-                <div class="progress-item">
-                    <span>History</span>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 60%"></div>
+                    <div class="progress-item">
+                        <span>History</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 60%"></div>
+                        </div>
+                        <span class="progress-percentage">60%</span>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <script src="js/dashboard.js"></script>
 </body>
 </html>

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /* settings.css */
 :root {
     --nav-width: 250px;
@@ -8,88 +7,162 @@
 }
 
 .settings-layout {
-    display: flex;
-    gap: var(--settings-gap);
-    padding: 2rem 0;
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
 }
 
-/* Settings Navigation */
+ /*Settings Navigation */
 .settings-nav {
-    width: var(--nav-width);
-    flex-shrink: 0;
-}
-
-.nav-list {
     background: white;
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow);
-    overflow: hidden;
-    position: sticky;
-    top: 2rem;
+    /*border-radius: var(--border-radius);*/
+    /*padding: var(--card-padding);*/
+    /*box-shadow: var(--shadow);*/
+    height: fit-content;
 }
 
-.nav-item {
+.settings-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.menu-item {
     display: flex;
     align-items: center;
-    gap: 1rem;
-    padding: 1rem 1.5rem;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    border-radius: var(--border-radius);
     color: var(--text-dark);
     text-decoration: none;
     transition: all 0.2s ease;
 }
 
-.nav-item i {
-    width: 20px;
-    text-align: center;
-    font-size: 1.1rem;
-    color: var(--text-light);
-}
-
-.nav-item:hover {
+.menu-item:hover {
     background: var(--background-light);
 }
 
-.nav-item.active {
+.menu-item.active {
     background: var(--primary-color);
     color: white;
 }
 
-.nav-item.active i {
-    color: white;
+.menu-item i {
+    width: 20px;
 }
 
 /* Settings Content */
 .settings-content {
-    flex: 1;
-    min-width: 0;
-}
-
-.section-header {
-    margin-bottom: var(--settings-gap);
-}
-
-.section-header h1 {
-    margin: 0;
-    font-size: 2rem;
-}
-
-.section-header p {
-    margin: 0.5rem 0 0 0;
-    color: var(--text-light);
-}
-
-/* Settings Cards */
-.settings-card {
     background: white;
     border-radius: var(--border-radius);
-    padding: 2rem;
+    padding: var(--card-padding);
     box-shadow: var(--shadow);
-    margin-bottom: var(--settings-gap);
 }
 
-.settings-card h2 {
-    margin: 0 0 1.5rem 0;
-    font-size: 1.25rem;
+.settings-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.settings-section.hidden {
+    display: none;
+}
+
+.settings-card {
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+}
+
+.settings-card h3 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+}
+
+/* Forms */
+.settings-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    font-weight: 500;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+.checkbox-label input[type="checkbox"] {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+/* Danger Zone */
+.danger-zone {
+    border-color: #ff4444;
+}
+
+.danger-zone h3 {
+    color: #ff4444;
+}
+
+.settings-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn-danger {
+    background: #ff4444;
+    color: white;
+}
+
+.btn-danger:hover {
+    background: #cc0000;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .settings-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .settings-nav {
+        margin-bottom: 1rem;
+    }
+
+    .settings-menu {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .menu-item {
+        flex: 1;
+        min-width: 150px;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .settings-actions {
+        flex-direction: column;
+    }
+
+    .menu-item {
+        min-width: 100%;
+    }
 }
 
 /* Forms */
@@ -114,7 +187,7 @@
 .form-actions {
     margin-top: 1rem;
     padding-top: 1rem;
-    border-top: 1px solid var(--border-color);
+    border-top: 1px solid ;
 }
 
 /* Avatar Settings */
@@ -241,11 +314,6 @@ input:checked + .slider:before {
     color: var(--text-dark);
 }
 
-.btn-danger {
-    background: var(--danger-color);
-    color: white;
-}
-
 /* Hidden Sections */
 .settings-section.hidden {
     display: none;
@@ -315,9 +383,6 @@ input:checked + .slider:before {
         border: 1px solid #000;
     }
 }
-
-=======
->>>>>>> 511509d5e211f2cf8f9aca6890c85f6b3f8b1a37
 .settings-container {
     display: grid;
     grid-template-columns: 250px 1fr;

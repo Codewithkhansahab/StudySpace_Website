@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
     <title>StudySpace - Flashcards</title>
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/flashcards.css">
@@ -23,200 +22,162 @@
             <li><a href="community.html"><i class="fas fa-users"></i> Community</a></li>
             <li><a href="settings.html"><i class="fas fa-cog"></i> Settings</a></li>
             <li><a href="profile.html"><i class="fas fa-user"></i> Profile</a></li>
-=======
-    <title>Flashcards - StudySpace</title>
-    <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/flashcards.css">
-</head>
-<body>
-    <nav style="display: flex; align-items: center;" class="main-nav">
-        <!-- Same navigation as other pages -->
-        <div class="nav-logo">StudySpace</div>
-        <ul class="nav-links">
-            <li><a href="index.html">Dashboard</a></li>
-            <li><a href="courses.html" class="active">My Courses</a></li>
-            <li><a href="calendar.html">Calendar</a></li>
-            <li><a href="resources.html">Resources</a></li>
-            <li><a href="flashcards.html">Flashcards</a></li>
-            <li><a href="goals.html">Goals</a></li>
-            <li><a href="statistics.html">Statistics</a></li>
-            <li><a href="community.html">Community</a></li>
-            <li><a href="settings.html">Settings</a></li>
-            <li><a href="profile.html">Profile</a></li>
->>>>>>> 511509d5e211f2cf8f9aca6890c85f6b3f8b1a37
         </ul>
     </nav>
 
     <div class="container">
-<<<<<<< HEAD
         <header class="page-header">
             <h1>Flashcards</h1>
-            <p class="subtitle">Create and study with flashcards</p>
+            <p class="subtitle">Review and memorize effectively</p>
         </header>
 
         <div class="flashcards-layout">
-            <!-- Sidebar with deck selection -->
+            <!-- Flashcard Decks Section -->
             <aside class="decks-sidebar">
                 <div class="sidebar-header">
                     <h2>My Decks</h2>
-                    <form action="/create-deck" method="post" class="inline-form">
-                        <button type="submit" class="btn btn-icon" title="Create New Deck">
-                            <i class="fas fa-plus"></i>
-                        </button>
-                    </form>
+                    <button class="btn btn-icon" title="Create New Deck">
+                        <i class="fas fa-plus"></i>
+                    </button>
+                </div>
+
+                <div class="deck-search">
+                    <input type="text" placeholder="Search decks..." class="form-control">
                 </div>
 
                 <div class="deck-list">
-                    <a href="#" class="deck-item active">
-                        <div class="deck-info">
-                            <i class="fas fa-layer-group"></i>
-                            <div class="deck-details">
-                                <h3>Math Formulas</h3>
-                                <p>32 cards • Due: 12 cards</p>
-                            </div>
+                    <div class="deck-item active">
+                        <div class="deck-icon">
+                            <i class="fas fa-calculator"></i>
                         </div>
-                        <span class="deck-progress">75%</span>
-                    </a>
+                        <div class="deck-info">
+                            <h3>Mathematics</h3>
+                            <p>50 cards • Due: 15</p>
+                        </div>
+                        <div class="deck-progress">
+                            <div class="progress-ring">75%</div>
+                        </div>
+                    </div>
 
-                    <a href="#" class="deck-item">
-                        <div class="deck-info">
-                            <i class="fas fa-layer-group"></i>
-                            <div class="deck-details">
-                                <h3>Physics Concepts</h3>
-                                <p>24 cards • Due: 8 cards</p>
-                            </div>
+                    <div class="deck-item">
+                        <div class="deck-icon">
+                            <i class="fas fa-atom"></i>
                         </div>
-                        <span class="deck-progress">60%</span>
-                    </a>
+                        <div class="deck-info">
+                            <h3>Physics</h3>
+                            <p>30 cards • Due: 8</p>
+                        </div>
+                        <div class="deck-progress">
+                            <div class="progress-ring">60%</div>
+                        </div>
+                    </div>
 
-                    <a href="#" class="deck-item">
-                        <div class="deck-info">
-                            <i class="fas fa-layer-group"></i>
-                            <div class="deck-details">
-                                <h3>Programming Terms</h3>
-                                <p>45 cards • Due: 15 cards</p>
-                            </div>
+                    <div class="deck-item">
+                        <div class="deck-icon">
+                            <i class="fas fa-code"></i>
                         </div>
-                        <span class="deck-progress">40%</span>
-                    </a>
+                        <div class="deck-info">
+                            <h3>Programming</h3>
+                            <p>45 cards • Due: 12</p>
+                        </div>
+                        <div class="deck-progress">
+                            <div class="progress-ring">40%</div>
+                        </div>
+                    </div>
                 </div>
             </aside>
 
-            <!-- Main study area -->
+            <!-- Main Study Area -->
             <main class="study-area">
                 <div class="study-controls">
-                    <div class="deck-title">
-                        <h2>Math Formulas</h2>
-                        <span class="card-count">Card 1 of 32</span>
-                    </div>
                     <div class="study-actions">
-                        <button class="btn btn-secondary">
-                            <i class="fas fa-random"></i> Shuffle
-                        </button>
                         <button class="btn btn-primary">
                             <i class="fas fa-play"></i> Start Study Session
                         </button>
+                        <button class="btn">
+                            <i class="fas fa-random"></i> Shuffle
+                        </button>
+                    </div>
+
+                    <div class="view-options">
+                        <button class="btn btn-icon active" title="Card View">
+                            <i class="fas fa-th-large"></i>
+                        </button>
+                        <button class="btn btn-icon" title="List View">
+                            <i class="fas fa-list"></i>
+                        </button>
                     </div>
                 </div>
 
-                <!-- Flashcard Component -->
-                <div class="flashcard">
-                    <div class="flashcard-inner">
-                        <div class="flashcard-front">
-                            <div class="card-content">
-                                <h3>What is the Pythagorean theorem?</h3>
+                <!-- Flashcard Study Interface -->
+                <div class="study-interface">
+                    <div class="flashcard">
+                        <div class="flashcard-content front">
+                            <div class="card-text">
+                                What is the derivative of e^x?
                             </div>
-                            <div class="card-footer">
-                                <span>Click to flip</span>
-                                <span class="difficulty easy">Easy</span>
+                            <div class="card-hint">
+                                Click to flip
                             </div>
                         </div>
-                        <div class="flashcard-back">
-                            <div class="card-content">
-                                <p>The Pythagorean theorem states that:</p>
-                                <p class="formula">a² + b² = c²</p>
-                                <p>Where c is the length of the hypotenuse, and a and b are the lengths of the other two sides of a right triangle.</p>
+                        <div class="flashcard-content back">
+                            <div class="card-text">
+                                The derivative of e^x is e^x
                             </div>
-                            <div class="card-footer">
-                                <div class="difficulty-buttons">
-                                    <button class="btn-difficulty easy">Easy</button>
-                                    <button class="btn-difficulty medium">Medium</button>
-                                    <button class="btn-difficulty hard">Hard</button>
-                                </div>
+                            <div class="card-explanation">
+                                This is because e^x is its own derivative, making it a unique and important function in calculus.
                             </div>
                         </div>
                     </div>
+
+                    <div class="study-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 40%"></div>
+                        </div>
+                        <span class="progress-text">Card 4 of 10</span>
+                    </div>
+
+                    <div class="rating-buttons">
+                        <button class="btn btn-danger">
+                            <i class="fas fa-times"></i> Again
+                        </button>
+                        <button class="btn btn-warning">
+                            <i class="fas fa-clock"></i> Hard
+                        </button>
+                        <button class="btn btn-info">
+                            <i class="fas fa-check"></i> Good
+                        </button>
+                        <button class="btn btn-success">
+                            <i class="fas fa-star"></i> Easy
+                        </button>
+                    </div>
                 </div>
 
-                <!-- Navigation Controls -->
-                <div class="card-navigation">
-                    <button class="btn btn-icon" title="Previous Card">
-                        <i class="fas fa-chevron-left"></i>
+                <!-- Card Management -->
+                <div class="card-management">
+                    <h2>Deck Cards</h2>
+                    <div class="card-list">
+                        <div class="card-item">
+                            <div class="card-preview">
+                                <div class="preview-front">What is the derivative of e^x?</div>
+                                <div class="preview-back">The derivative of e^x is e^x</div>
+                            </div>
+                            <div class="card-actions">
+                                <button class="btn btn-icon" title="Edit">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                                <button class="btn btn-icon" title="Delete">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary add-card">
+                        <i class="fas fa-plus"></i> Add New Card
                     </button>
-                    <button class="btn btn-icon" title="Next Card">
-                        <i class="fas fa-chevron-right"></i>
-                    </button>
-                </div>
-
-                <!-- Study Statistics -->
-                <div class="study-stats">
-                    <div class="stat-card">
-                        <i class="fas fa-check"></i>
-                        <div class="stat-info">
-                            <h4>Mastered</h4>
-                            <p>24 cards</p>
-                        </div>
-                    </div>
-                    <div class="stat-card">
-                        <i class="fas fa-clock"></i>
-                        <div class="stat-info">
-                            <h4>Due Today</h4>
-                            <p>12 cards</p>
-                        </div>
-                    </div>
-                    <div class="stat-card">
-                        <i class="fas fa-star"></i>
-                        <div class="stat-info">
-                            <h4>Streak</h4>
-                            <p>5 days</p>
-                        </div>
-                    </div>
                 </div>
             </main>
-=======
-        <header>
-            <h1>Flashcards</h1>
-            <p class="subtitle">Review and Memorize</p>
-        </header>
-
-        <div class="flashcards-container">
-            <div class="deck-selection">
-                <h2>Select Deck</h2>
-                <select class="deck-select">
-                    <option>Mathematics</option>
-                    <option>Physics</option>
-                    <option>Chemistry</option>
-                </select>
-            </div>
-
-            <div class="flashcard">
-                <div class="flashcard-inner">
-                    <div class="flashcard-front">
-                        <h3>What is the Pythagorean theorem?</h3>
-                    </div>
-                    <div class="flashcard-back">
-                        <p>a² + b² = c²</p>
-                        <p>In a right triangle, the square of the hypotenuse equals the sum of squares of the other two sides.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="flashcard-controls">
-                <button class="prev-btn">Previous</button>
-                <span class="card-counter">1/20</span>
-                <button class="next-btn">Next</button>
-            </div>
->>>>>>> 511509d5e211f2cf8f9aca6890c85f6b3f8b1a37
         </div>
     </div>
 </body>

@@ -1,23 +1,17 @@
 .dashboard {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-<<<<<<< HEAD
     gap: 25px;
     padding: 20px;
     animation: fadeIn 0.8s ease;
-=======
-    gap: 20px;
-    padding: 20px;
->>>>>>> 511509d5e211f2cf8f9aca6890c85f6b3f8b1a37
 }
 
 .widget {
     background: white;
-<<<<<<< HEAD
     border-radius: 15px;
     padding: 25px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: var(--transition);
+
 }
 
 .widget:hover {
@@ -26,7 +20,7 @@
 }
 
 .widget h2 {
-    color: var(--dark-color);
+
     margin-bottom: 20px;
     padding-bottom: 10px;
     border-bottom: 2px solid #f0f2f5;
@@ -41,11 +35,6 @@
     width: 50px;
     height: 2px;
     background: var(--primary-color);
-=======
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
->>>>>>> 511509d5e211f2cf8f9aca6890c85f6b3f8b1a37
 }
 
 /* Tasks Widget */
@@ -55,7 +44,6 @@
 }
 
 .task-list li {
-<<<<<<< HEAD
     display: flex;
     align-items: center;
     padding: 0.5rem 0;
@@ -72,26 +60,10 @@
     margin: 1rem 0;
     font-weight: bold;
     color: var(--primary-color);
-=======
-    padding: 10px;
-    margin: 5px 0;
-    background: #f8f9fa;
-    border-radius: 5px;
-}
-
-/* Timer Widget */
-.timer-display {
-    font-size: 2.5em;
-    text-align: center;
-    margin: 20px 0;
-    font-weight: bold;
-    color: #2c3e50;
->>>>>>> 511509d5e211f2cf8f9aca6890c85f6b3f8b1a37
 }
 
 .timer-controls {
     display: flex;
-<<<<<<< HEAD
     gap: 1rem;
     justify-content: center;
 }
@@ -101,7 +73,6 @@
     border-radius: 25px;
     border: none;
     cursor: pointer;
-    transition: var(--transition);
     text-transform: uppercase;
     letter-spacing: 1px;
 }
@@ -119,15 +90,10 @@
 .timer-controls button:hover {
     transform: scale(1.05);
     opacity: 0.9;
-=======
-    justify-content: center;
-    gap: 10px;
->>>>>>> 511509d5e211f2cf8f9aca6890c85f6b3f8b1a37
 }
 
 /* Notes Widget */
 .note {
-<<<<<<< HEAD
     background: var(--background-light);
     padding: 1rem;
     border-radius: 5px;
@@ -147,28 +113,16 @@
     padding: 5px;
     border-radius: 50%;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-=======
-    background: #fff9c4;
-    padding: 15px;
-    margin-bottom: 10px;
-    border-radius: 5px;
->>>>>>> 511509d5e211f2cf8f9aca6890c85f6b3f8b1a37
 }
 
 /* Progress Widget */
 .progress-item {
-<<<<<<< HEAD
     margin-bottom: 1rem;
-=======
-    margin-bottom: 15px;
->>>>>>> 511509d5e211f2cf8f9aca6890c85f6b3f8b1a37
 }
 
 .progress-item span {
     display: block;
-<<<<<<< HEAD
     margin-bottom: 8px;
-    color: var(--dark-color);
     font-weight: 500;
 }
 
@@ -184,34 +138,243 @@
     height: 100%;
     border-radius: 5px;
     transition: width var(--transition-speed) ease;
-=======
-    margin-bottom: 5px;
-}
-
-.progress-bar {
-    background: #eee;
-    height: 10px;
-    border-radius: 5px;
-    overflow: hidden;
-}
-
-.progress-fill {
-    height: 100%;
-    background: #2ecc71;
-    border-radius: 5px;
-    transition: width 0.3s ease;
->>>>>>> 511509d5e211f2cf8f9aca6890c85f6b3f8b1a37
 }
 
 @media (max-width: 768px) {
     .dashboard {
         grid-template-columns: 1fr;
     }
-<<<<<<< HEAD
     
     .widget {
         margin-bottom: 20px;
     }
-=======
->>>>>>> 511509d5e211f2cf8f9aca6890c85f6b3f8b1a37
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.page-header {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.page-header h1 {
+    margin: 0;
+    color: var(--text-dark);
+    font-size: 2.5rem;
+}
+
+.subtitle {
+    color: var(--text-light);
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+}
+
+.dashboard.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background: white;
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+}
+
+.card h2 {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.25rem;
+}
+
+.card h2 i {
+    color: var(--primary-color);
+}
+
+/* Tasks Card */
+.tasks .task-form {
+    margin-bottom: 1.5rem;
+}
+
+.task-list {
+    list-style: none;
+}
+
+.task-list li {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.task-list li:last-child {
+    border-bottom: none;
+}
+
+.task-list input[type="checkbox"] {
+    margin-right: 0.75rem;
+    width: 18px;
+    height: 18px;
+}
+
+/* Timer Card */
+.timer-display {
+    font-size: 3rem;
+    text-align: center;
+    font-weight: bold;
+    margin: 2rem 0;
+}
+
+.timer-controls {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+/* Notes Card */
+.notes .note-form {
+    margin-bottom: 1.5rem;
+}
+
+.notes-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.note {
+    background: var(--background-light);
+    padding: 1rem;
+    border-radius: var(--border-radius);
+}
+
+/* Progress Card */
+.progress-items {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.progress-item span {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.progress-percentage {
+    margin-top: 0.25rem;
+    font-size: 0.875rem;
+    color: var(--text-light);
+}
+
+/* Card Headers */
+.card h2 {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.25rem;
+}
+
+.card h2 i {
+    color: var(--primary-color);
+}
+
+/* Form Group Layouts */
+.form-group {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.form-group textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .dashboard.grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .timer-display {
+        font-size: 2.5rem;
+    }
+
+    .form-group {
+        flex-direction: column;
+    }
+}
+
+/* Common Form Elements */
+.form-control {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+}
+
+.btn {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn-primary {
+    background: var(--primary-color);
+    color: white;
+}
+
+.btn-secondary {
+    background: var(--background-light);
+    color: var(--text-dark);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .dashboard.grid {
+        grid-template-columns: 1fr;
+    }
+
+    .timer-display {
+        font-size: 2.5rem;
+    }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    .progress-fill {
+        transition: none;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .card {
+        break-inside: avoid;
+        box-shadow: none;
+    }
+
+    .timer-controls,
+    .task-form,
+    .note-form {
+        display: none;
+    }
+}
+h1{
+    color: #000;
 }
